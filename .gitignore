@@ -1,0 +1,10 @@
+**/bin/
+**/obj/
+Logs/
+Staging/
+appsettings.backup.json
+.vs/
+*.user
+*.suo
+
+DatosCSV/
