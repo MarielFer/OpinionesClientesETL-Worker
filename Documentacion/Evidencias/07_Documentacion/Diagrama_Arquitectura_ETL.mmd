@@ -1,0 +1,8 @@
+﻿flowchart LR
+A["Encuestas CSV: 500 registros"] --> D["Extraccion"]
+B["SQL Server: 6 registros"] --> D
+C["API REST: 500 registros"] --> D
+D --> E["Worker Service .NET 8"]
+E --> F["Staging JSON"]
+E --> G["Logs Serilog"]
+E --> H["Resumen de ejecucion"]

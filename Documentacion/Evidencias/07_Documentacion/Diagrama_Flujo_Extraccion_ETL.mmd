@@ -1,0 +1,13 @@
+﻿flowchart TD
+A["Inicio Worker"] --> B["Leer configuracion"]
+B --> C{"Fuente seleccionada"}
+C -->|CSV| D["Leer encuestas"]
+C -->|SQL| E["Consultar SQL Server"]
+C -->|API| F["Consumir API REST"]
+D --> G["Procesar registros"]
+E --> G
+F --> G
+G --> H["Guardar JSON en Staging"]
+H --> I["Registrar logs y errores"]
+I --> J["Generar resumen"]
+J --> K["Fin"]
